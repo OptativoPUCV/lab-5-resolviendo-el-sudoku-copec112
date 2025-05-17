@@ -145,9 +145,6 @@ Node* DFS(Node* initial, int* cont){
     (*cont)++;
 
     if (is_final(current)) return current;
-
-    List* adj = get_adj_nodes(current);
-    void* ptr = first(adj);
         
   }
 
