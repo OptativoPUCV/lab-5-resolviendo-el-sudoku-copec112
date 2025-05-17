@@ -70,8 +70,25 @@ int is_valid(Node* n){
             }
         }
     }
+
+    // Revisar subcuadrantes 3x3
+    for (i = 0; i < 9; i += 3) {
+        for (j = 0; j < 9; j += 3) {
+            for (k = 0; k < 10; k++) seen[k] = 0;
+            for (k = 0; k < 3; k++) {
+                for (l = 0; l < 3; l++) {
+                    int val = n->sudo[i + k][j + l];
+                    if (val != 0) {
+                        if (seen[val]) return 0;
+                        seen[val] = 1;
+                    }
+                }
+            }
+        }
+    }
+
     return 1;
-  }
+}
 
 
 List* get_adj_nodes(Node* n){
