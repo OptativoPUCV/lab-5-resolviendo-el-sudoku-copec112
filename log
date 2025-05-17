@@ -46,3 +46,14 @@ Sat, May 17, 2025  1:33:55 PM:
  tests:  6|2
 total_score: 45/70
 a2370d5
+Sat, May 17, 2025  1:39:56 PM: 
+ sudoku.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:150:11: error: unused variable 'ptr' [-Werror=unused-variable]
+     void* ptr = first(adj);
+           ^~~
+cc1.exe: all warnings being treated as errors
+0099f3b
