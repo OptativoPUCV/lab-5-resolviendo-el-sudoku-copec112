@@ -149,16 +149,23 @@ Node* DFS(Node* initial, int* cont){
         List* adj = get_adj_nodes(current);
         void* ptr = first(adj);
         while (ptr) {
-            push(stack, ptr);
+            Node* child = (Node*) ptr;
+            if (is_valid(child)) {
+                push(stack, child);
+            } else {
+                free(child);  // liberamos memoria de hijos inválidos
+            }
             ptr = next(adj);
         }
 
         clean(adj);
         free(adj);
     }
-    */
+        */
+
     return NULL;
 }
+
 
 
 
