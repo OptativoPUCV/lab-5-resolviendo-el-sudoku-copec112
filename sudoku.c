@@ -114,6 +114,7 @@ List* get_adj_nodes(Node* n){
                     else free(new);
                     
               }
+                return list;
                 
           }
       }
@@ -135,7 +136,7 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
-    /*
+    
     Stack* stack = createStack();
     push(stack, initial);
 
@@ -161,7 +162,7 @@ Node* DFS(Node* initial, int* cont){
         clean(adj);
         free(adj);
     }
-        */
+        
 
     return NULL;
 }
